@@ -1,0 +1,32 @@
+{
+    "name": "mobx-snippets",
+    "displayName": "mobx-snippets",
+    "description": "some useful snippets for mobx && react",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/jsx.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/tsx.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/js.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/ts.json"
+            }
+        ]
+    }
+}

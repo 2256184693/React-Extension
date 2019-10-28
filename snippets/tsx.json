@@ -1,0 +1,57 @@
+{
+    "Common React Component With Typescript": {
+        "prefix": "react-page",
+        "description": "通用React组件配置",
+        "body": [
+            "import * as React from 'react';",
+            "interface ${1:ComponentName}Props {",
+            "\t",
+            "}",
+            "interface ${1:ComponentName}State {",
+            "\t",
+            "}",
+            "class ${1:ComponentName} extends React.Component<${1:ComponentName}Props, ${1:ComponentName}State> {",
+            "\tconstructor(props: ${1:ComponentName}Props) {",
+            "\t\tsuper(props);",
+            "\t\tthis.state = {$0};",
+            "\t}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<div className=\"$2\"></div>",
+            "\t\t);",
+            "\t}",
+            "\tcomponentDidMount() {}",
+            "}",
+            "export default ${1:ComponentName};"
+        ]
+    },
+    "Mobx React Component With Typescript": {
+        "prefix": "react-mobx-page",
+        "description": "React结合Mobx组件配置",
+        "body": [
+            "import * as React from 'react';",
+            "import { observer, inject } from 'mobx-react';",
+            "interface ${1:ComponentName}Props {",
+            "\t",
+            "}",
+            "interface ${1:ComponentName}State {",
+            "\t",
+            "}",
+            "@inject('$3')",
+            "@observer",
+            "class ${1:ComponentName} extends React.Component<${1:ComponentName}Props, ${1:ComponentName}State> {",
+            "\tconstructor(props) {",
+            "\t\tsuper(props);",
+            "\t\tthis.state = {$0};",
+            "\t}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<div className=\"$2\"></div>",
+            "\t\t);",
+            "\t}",
+            "\tcomponentDidMount() {}",
+            "}",
+            "export default ${1:ComponentName};"
+        ]
+    }
+}
