@@ -3,6 +3,7 @@
     "displayName": "mobx-snippets",
     "description": "some useful snippets for mobx && react",
     "version": "0.0.1",
+    "publisher": "sh",
     "engines": {
         "vscode": "^1.39.0"
     },
