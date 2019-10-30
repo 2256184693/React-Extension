@@ -5,11 +5,11 @@
         "body": [
             "import { observable, computed, action, runInAction } from 'mobx';",
             "export default class ${1:StoreName} {",
-            "\t@observable ${2:stateKey}: ${3: stateType} = ${4:stateValue}",
+            "\t@observable ${2:stateKey}: ${3: stateType} = ${4:stateValue};$0",
             "\t@action('${5:描述}')",
             "\t${6:actionName}() {",
             "\t\trunInAction('${7:描述}', () => {",
-            "\t\t\tconsole.log('异步修改')",
+            "\t\t\tconsole.log('异步修改');",
             "\t\t});",
             "\t}",
             "};"
@@ -19,7 +19,7 @@
         "prefix": "mobx-state",
         "description": "Mobx Store Value",
         "body": [
-            "@observable ${1:stateKey}: ${2:stateType} = ${3:stateValue}$0"
+            "@observable ${1:stateKey}: ${2:stateType} = ${3:stateValue};$0"
         ]
     },
     "Computed Value In Mobx": {
@@ -29,7 +29,7 @@
             "@computed get ${1:ComputedValue}($2) {",
             "\t$0",
             "}",
-            "set ${1:ComputedValue} () {",
+            "set ${1:ComputedValue}() {",
             "\t",
             "}"
         ]
@@ -40,8 +40,8 @@
         "body": [
             "@action('${1:action描述}')",
             "${2:actionName}() {",
-            "\t${3:runInAction('', () => {\\})}",
-            "}"
+            "\t${3:runInAction('', () => {\\});}",
+            "}$0"
         ]
 
     },

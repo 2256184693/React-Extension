@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/2256184693/Mobx-Snippets"
     },
-    "icon": "snippets/mobx.png",
+    "icon": "snippets/assets/mobx.png",
     "publisher": "sh",
     "engines": {
         "vscode": "^1.0.3"
