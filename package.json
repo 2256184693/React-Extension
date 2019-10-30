@@ -10,7 +10,7 @@
     "icon": "snippets/mobx.png",
     "publisher": "sh",
     "engines": {
-        "vscode": "^1.39.0"
+        "vscode": "^1.0.3"
     },
     "categories": [
         "Snippets"
