@@ -1,19 +1,19 @@
 {
-    "name": "mobx-snippets",
-    "displayName": "mobx-snippets",
-    "description": "some useful snippets for mobx && react",
-    "version": "0.0.5",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/2256184693/Mobx-Snippets"
-    },
-    "icon": "snippets/assets/mobx.png",
-    "publisher": "sh",
-    "engines": {
-        "vscode": "^1.0.3"
-    },
-    "categories": [
-        "Snippets"
+	"name": "mobx-snippets",
+	"displayName": "mobx-snippets",
+	"description": "some useful snippets for mobx && react",
+	"version": "0.0.5",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/2256184693/Mobx-Snippets"
+	},
+	"icon": "snippets/assets/mobx.png",
+	"publisher": "sh",
+	"engines": {
+		"vscode": "^1.0.3"
+	},
+	"categories": [
+		"Snippets"
 	],
 	"activationEvents": [
 		"onCommand:extension.sayHello",
@@ -21,26 +21,26 @@
 		"onCommand:extension.createReactTemplate"
 	],
 	"main": "./out/extensions/main.js",
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascriptreact",
-                "path": "./src/snippets/jsx.json"
-            },
-            {
-                "language": "typescriptreact",
-                "path": "./src/snippets/tsx.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./src/snippets/js.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./src/snippets/ts.json"
-            }
-        ],
-        "commands": [
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascriptreact",
+				"path": "./src/snippets/jsx.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./src/snippets/tsx.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/js.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/ts.json"
+			}
+		],
+		"commands": [
 			{
 				"command": "extension.createReactTemplate",
 				"title": "新建模版"
@@ -63,7 +63,7 @@
 				"when": "editorTextFocus"
 			}
 		]
-    },
+	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
@@ -73,14 +73,14 @@
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.6",
+		"@types/mocha": "^5.2.7",
 		"@types/node": "^10.12.21",
 		"@types/vscode": "^1.38.0",
 		"eslint": "^5.13.0",
 		"glob": "^7.1.4",
-		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
+		"mocha": "^6.2.2",
 		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
 		"vscode-test": "^1.2.0"
 	}
 }
