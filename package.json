@@ -16,8 +16,6 @@
 		"Snippets"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello",
-		"onCommand:extension.getPath",
 		"onCommand:extension.createReactTemplate"
 	],
 	"main": "./out/extensions/main.js",
@@ -38,7 +36,23 @@
 			{
 				"language": "typescript",
 				"path": "./src/snippets/ts.json"
-			}
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/react.json"
+      }
 		],
 		"commands": [
 			{

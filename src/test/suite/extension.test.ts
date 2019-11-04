@@ -14,7 +14,7 @@ import {
 } from '../../extensions/create-react-template/template/creator';
 import { CssType, FileType } from '../../extensions/create-react-template/typings';
 
-suite('Extension Test Suite', () => {
+suite('Create-React-Template插件测试', () => {
 	vscode.window.showInformationMessage('Start all tests.');
 
 	test('名称处理函数与行文本处理函数测试', () => {
@@ -29,5 +29,9 @@ suite('Extension Test Suite', () => {
     assert.equal('index.less', handleName('index.[cssext]', options));
     assert.equal('index.less.d.ts', handleName('index.[cssext].d.ts', options));
     assert.equal('class TestFileName extends', handleLine('class $FILE_NAME extends', options));
+    assert.equal(
+      'class TestFileName extends React.Component<TestFileNameProps, TestFileNameState> {', 
+      handleLine('class $FILE_NAME extends React.Component<$FILE_NAMEProps, $FILE_NAMEState> {', options)
+    );
 	});
 });

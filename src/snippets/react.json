@@ -1,0 +1,54 @@
+{
+  "useState": {
+    "prefix": "useState",
+    "description": "useState",
+    "body": [
+      "let [${1:stateName}, set${2:StateName}] = useState(${3:initialValue});"
+    ]
+  },
+  "useEffect": {
+    "prefix": "useEffect",
+    "description": "useEffect模版",
+    "body": [
+      "useEffect(() => {",
+      "\t${1:// content}",
+      "\treturn () => {",
+      "\t\t${2:// clearEffect}",
+      "\t};",
+      "}, [${3:stateName}]);"
+    ]
+  },
+  "useContext": {
+    "prefix": "useContext",
+    "description": "useContext模版",
+    "body": [
+      "const ${1:contextValue} = useContext(${2:Context});"
+    ]
+  },
+  "useReducer": {
+    "prefix": "useReducer",
+    "description": "useReducer模版",
+    "body": [
+      "const [${1:stateName}, dispatch] = useReducer(${2:reducer}, ${3:initialValue}, ${4:init});"
+    ]
+  },
+  "useCallback": {
+    "prefix": "useCallback",
+    "description": "useCallback模版",
+    "body": [
+      "const ${1:memoizedCallback} = useCallback(",
+      "\t() => {",
+      "\t\t${3:doSomething}(${2:stateName});",
+      "\t},",
+      "\t[${2:stateName}],",
+      ");"
+    ]
+  },
+  "useMemo": {
+    "prefix": "useMemo",
+    "description": "useMemo模版",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => ${4:computeExpensiveValue}(${2:stateName}), [${2:stateName}]);"
+    ]
+  }
+}

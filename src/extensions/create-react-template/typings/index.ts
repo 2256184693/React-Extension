@@ -11,7 +11,9 @@ export enum CssType {
 }
 
 export const TempList: TempInfo[] = [
-  {name: 'default', title: '默认'}
+  {name: 'default', title: '默认'},
+  {name: 'component', title: '组件'},
+  {name: 'functional', title: '函数组件'}
 ];
 
 export interface TempInfo {
@@ -21,7 +23,9 @@ export interface TempInfo {
 }
 
 export enum TempType {
-  Default = 'default'
+  Default = 'default',
+  Component = 'component',
+  Functional = 'functional'
 }
 
 export type FileName = string;

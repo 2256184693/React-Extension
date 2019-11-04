@@ -1,7 +1,7 @@
 {
   "default": [
     {
-      "name": "index.module.[cssext]",
+      "name": "index.[cssext]",
       "body": [
         ".$FILE_NAME {",
         "\t",
@@ -9,29 +9,55 @@
       ]
     },
     {
-      "name": "index.module.[cssext].d.ts",
-      "type": "typescript",
-      "body": [
-        "export const $FILE_NAME: string;"
-      ]
-    },
-    {
       "name": "index.tsx",
       "type": "typescript",
       "body": [
-        "import React from 'react';",
-        "import classnames from 'classnames';",
-        "import Style from './index.module.[cssext]';",
+        "import * as React from 'react';",
+        "",
+        "import './index.[cssext]';",
         "",
         "interface $FILE_NAMEProps {",
-        "\tclassName?: string;",
+        "\t",
         "}",
+        "interface $FILE_NAMEState {",
+        "\t",
+        "}",
+        "class $FILE_NAME extends React.Component<$FILE_NAMEProps, $FILE_NAMEState> {",
+        "\tconstructor(props: $FILE_NAMEProps) {",
+        "\t\tsuper(props);",
+        "\t\tthis.state = {};",
+        "\t}",
+        "\trender() {",
+        "\t\treturn (",
+        "\t\t\t<div className=\"$FILE_NAME\"></div>",
+        "\t\t);",
+        "\t}",
+        "\tcomponentDidMount() {}",
+        "}",
+        "export default $FILE_NAME;"
+      ]
+    },
+    {
+      "name": "index.jsx",
+      "type": "javascript",
+      "body": [
+        "import React from 'react';",
         "",
-        "export default function $FILE_NAME(props: $FILE_NAMEProps) {",
-        "\treturn (",
-        "\t\t<div className={classnames(props.className, Style.$FILE_NAME)}></div>",
-        "\t);",
-        "}"
+        "import './index.[cssext]';",
+        "",
+        "class $FILE_NAME extends React.Component {",
+        "\tconstructor(props) {",
+        "\t\tsuper(props);",
+        "\t\tthis.state = {};",
+        "\t}",
+        "\trender() {",
+        "\t\treturn (",
+        "\t\t\t<div className=\"$FILE_NAME\"></div>",
+        "\t\t);",
+        "\t}",
+        "\tcomponentDidMount() {}",
+        "}",
+        "export default $FILE_NAME;"
       ]
     }
   ]

@@ -15,6 +15,9 @@ import {
 } from '../typings';
 
 import defaultJson from './default.json';
+import componentJson from './component.json';
+import functionalJson from './functional.json';
+
 
 export interface FileConfig {
   name: string;
@@ -27,6 +30,29 @@ export interface CreateFileOptions {
   cssType: CssType;
   fileName: FileName;
   directory: vscode.Uri;
+}
+
+/**
+ *  通过模版类型获取模版配置
+ * @param tempType Template type
+ */
+const getConfigJson = (tempType: TempType) => {
+  let data = null;
+  switch (tempType) {
+    case TempType.Default: {
+      data = defaultJson; break;
+    }
+    case TempType.Component: {
+      data = componentJson; break;
+    }
+    case TempType.Functional: {
+      data = functionalJson; break;
+    }
+    default: {
+      data = defaultJson;
+    }
+  }
+  return data as FileConfig[];
 }
 
 export const creator = async (options: Options) => {
@@ -47,24 +73,6 @@ export const creator = async (options: Options) => {
   vscode.window.showInformationMessage(`新建成功`);
 }
 
-/**
- *  通过模版类型获取模版配置
- * @param tempType Template type
- */
-const getConfigJson = (tempType: TempType) => {
-  let data = null;
-  switch (tempType) {
-    case TempType.Default: {
-      data = defaultJson;
-      break;
-    }
-    default: {
-      data = defaultJson;
-    }
-  }
-  return data as FileConfig[];
-}
-
 const createDirectory = (uri: vscode.Uri) => {
   return new Promise((resolve, reject) => {
     vscode.workspace.fs.createDirectory(uri).then(() => {
@@ -78,12 +86,12 @@ const createDirectory = (uri: vscode.Uri) => {
 
 export const handleLine = (line: string, options: CreateFileOptions) => {
   let { fileName, cssType } = options;
-  return line.replace('$FILE_NAME', fileName).replace('[cssext]', cssType);
+  return line.replace(/\$FILE_NAME/g, fileName).replace(/\[cssext\]/g, cssType);
 }
 
 export const handleName = (name: string, options: CreateFileOptions) => {
   let { cssType } = options;
-  return name.replace('[cssext]', cssType);
+  return name.replace(/\[cssext\]/g, cssType);
 }
 
 const createFiles = (configJson: FileConfig[], options: CreateFileOptions) => {
