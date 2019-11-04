@@ -16,13 +16,13 @@ import {
 
 import defaultJson from './default.json';
 
-interface FileConfig {
+export interface FileConfig {
   name: string;
   body: string[]
   type?: FileType;
 }
 
-interface CreateFileOptions {
+export interface CreateFileOptions {
   fileType: FileType;
   cssType: CssType;
   fileName: FileName;
@@ -76,12 +76,12 @@ const createDirectory = (uri: vscode.Uri) => {
   })
 }
 
-const handleLine = (line: string, options: CreateFileOptions) => {
+export const handleLine = (line: string, options: CreateFileOptions) => {
   let { fileName, cssType } = options;
   return line.replace('$FILE_NAME', fileName).replace('[cssext]', cssType);
 }
 
-const handleName = (name: string, options: CreateFileOptions) => {
+export const handleName = (name: string, options: CreateFileOptions) => {
   let { cssType } = options;
   return name.replace('[cssext]', cssType);
 }

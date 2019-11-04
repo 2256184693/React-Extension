@@ -1,6 +1,6 @@
-const path = require('path');
-const Mocha = require('mocha');
-const glob = require('glob');
+import * as path from 'path';
+import * as Mocha from 'mocha';
+import * as glob from 'glob';
 
 function run() {
 	// Create the mocha test
