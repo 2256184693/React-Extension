@@ -2,12 +2,12 @@
 	"name": "mobx-snippets",
 	"displayName": "mobx-snippets",
 	"description": "some useful snippets for mobx && react",
-	"version": "0.0.5",
+	"version": "0.1.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/2256184693/Mobx-Snippets"
-  },
-  "license": "MIT",
+	},
+	"license": "MIT",
 	"icon": "src/assets/mobx.png",
 	"publisher": "sh",
 	"engines": {
@@ -37,23 +37,23 @@
 			{
 				"language": "typescript",
 				"path": "./src/snippets/ts.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./src/snippets/react.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./src/snippets/react.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./src/snippets/react.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/react.json"
-      }
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./src/snippets/react.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./src/snippets/react.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/react.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/react.json"
+			}
 		],
 		"commands": [
 			{
