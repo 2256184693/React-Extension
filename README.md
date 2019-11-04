@@ -17,6 +17,8 @@ Prefix|Snippets|Description
 
 ### 常用的代码片段
 
+> `React Hooks` 常用代码片段已经支持。
+
 Prefix|Snippets|Description
 :---|:---|:---
 `mobx-store`|-|包含一个预设的Mobx的Store代码。
