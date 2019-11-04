@@ -1,38 +1,100 @@
 {
-    "name": "mobx-snippets",
-    "displayName": "mobx-snippets",
-    "description": "some useful snippets for mobx && react",
-    "version": "0.0.4",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/2256184693/Mobx-Snippets"
-    },
-    "icon": "snippets/assets/mobx.png",
-    "publisher": "sh",
-    "engines": {
-        "vscode": "^1.0.3"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascriptreact",
-                "path": "./snippets/jsx.json"
-            },
-            {
-                "language": "typescriptreact",
-                "path": "./snippets/tsx.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/js.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/ts.json"
-            }
-        ]
-    }
+	"name": "mobx-snippets",
+	"displayName": "mobx-snippets",
+	"description": "some useful snippets for mobx && react",
+	"version": "0.0.5",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/2256184693/Mobx-Snippets"
+	},
+	"icon": "snippets/assets/mobx.png",
+	"publisher": "sh",
+	"engines": {
+		"vscode": "^1.0.3"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"activationEvents": [
+		"onCommand:extension.createReactTemplate"
+	],
+	"main": "./out/extensions/main.js",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascriptreact",
+				"path": "./src/snippets/jsx.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./src/snippets/tsx.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/js.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/ts.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/react.json"
+      }
+		],
+		"commands": [
+			{
+				"command": "extension.createReactTemplate",
+				"title": "新建模版"
+			}
+		],
+		"menus": {
+			"editor/context": [],
+			"explorer/context": [
+				{
+					"command": "extension.createReactTemplate",
+					"group": "navigation"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.sayHello",
+				"key": "ctrl+f10",
+				"mac": "cmd+f10",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.38.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.2.2",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.2.0"
+	}
 }

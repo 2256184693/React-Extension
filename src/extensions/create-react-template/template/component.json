@@ -1,0 +1,63 @@
+{
+  "default": [
+    {
+      "name": "index.module.[cssext]",
+      "type": "typescript",
+      "body": [
+        ".$FILE_NAME {",
+        "\t",
+        "}"
+      ]
+    },
+    {
+      "name": "index.module.[cssext].d.ts",
+      "type": "typescript",
+      "body": [
+        "export const $FILE_NAME: string;"
+      ]
+    },
+    {
+      "name": "index.tsx",
+      "type": "typescript",
+      "body": [
+        "import React from 'react';",
+        "import classnames from 'classnames';",
+        "import Style from './index.module.[cssext]';",
+        "",
+        "interface $FILE_NAMEProps {",
+        "\tclassName?: string;",
+        "}",
+        "",
+        "export default function $FILE_NAME(props: $FILE_NAMEProps) {",
+        "\treturn (",
+        "\t\t<div className={classnames(props.className, Style.$FILE_NAME)}></div>",
+        "\t);",
+        "}"
+      ]
+    },
+    {
+      "name": "index.[cssext]",
+      "type": "javascript",
+      "body": [
+        ".$FILE_NAME {",
+        "\t",
+        "}"
+      ]
+    },
+    {
+      "name": "index.tsx",
+      "type": "javascript",
+      "body": [
+        "import React from 'react';",
+        "import classnames from 'classnames';",
+        "import './index.[cssext]';",
+        "",
+        "export default function $FILE_NAME(props) {",
+        "\treturn (",
+        "\t\t<div className={classnames(props.className, '$FILE_NAME')}></div>",
+        "\t);",
+        "}"
+      ]
+    }
+  ]
+}

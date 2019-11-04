@@ -1,0 +1,64 @@
+{
+  "default": [
+    {
+      "name": "index.[cssext]",
+      "body": [
+        ".$FILE_NAME {",
+        "\t",
+        "}"
+      ]
+    },
+    {
+      "name": "index.tsx",
+      "type": "typescript",
+      "body": [
+        "import * as React from 'react';",
+        "",
+        "import './index.[cssext]';",
+        "",
+        "interface $FILE_NAMEProps {",
+        "\t",
+        "}",
+        "interface $FILE_NAMEState {",
+        "\t",
+        "}",
+        "class $FILE_NAME extends React.Component<$FILE_NAMEProps, $FILE_NAMEState> {",
+        "\tconstructor(props: $FILE_NAMEProps) {",
+        "\t\tsuper(props);",
+        "\t\tthis.state = {};",
+        "\t}",
+        "\trender() {",
+        "\t\treturn (",
+        "\t\t\t<div className=\"$FILE_NAME\"></div>",
+        "\t\t);",
+        "\t}",
+        "\tcomponentDidMount() {}",
+        "}",
+        "export default $FILE_NAME;"
+      ]
+    },
+    {
+      "name": "index.jsx",
+      "type": "javascript",
+      "body": [
+        "import React from 'react';",
+        "",
+        "import './index.[cssext]';",
+        "",
+        "class $FILE_NAME extends React.Component {",
+        "\tconstructor(props) {",
+        "\t\tsuper(props);",
+        "\t\tthis.state = {};",
+        "\t}",
+        "\trender() {",
+        "\t\treturn (",
+        "\t\t\t<div className=\"$FILE_NAME\"></div>",
+        "\t\t);",
+        "\t}",
+        "\tcomponentDidMount() {}",
+        "}",
+        "export default $FILE_NAME;"
+      ]
+    }
+  ]
+}
