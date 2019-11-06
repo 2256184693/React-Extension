@@ -2,7 +2,7 @@
 	"name": "mobx-snippets",
 	"displayName": "mobx-snippets",
 	"description": "some useful snippets for mobx && react",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/2256184693/Mobx-Snippets"
@@ -71,50 +71,50 @@
 			]
 		},
 		"keybindings": [],
-    "configuration": {
-      "type": "object",
-      "title": "Mobx-Snippets",
-      "properties": {
-        "mobx.snippets.autoCreate": {
-          "type": "boolean",
-          "default": false,
-          "description": "是否根据设置自动生成模版"
-        },
-        "mobx.snippets.tempType": {
-          "type": "string",
-          "default": "default",
-          "description": "默认生成的模版类型",
-          "enum": [
-            "default",
-            "component",
-            "functional"
-          ],
-          "enumDescriptions": [
-            "默认模版",
-            "组件模版（包括classNames库）",
-            "函数组件"
-          ]
-        },
-        "mobx.snippets.fileType": {
-          "type": "string",
-          "default": "typescript",
-          "description": "默认的文件类型",
-          "enum": [
-            "typescript",
-            "javascript"
-          ]
-        },
-        "mobx.snippets.cssType": {
-          "type": "string",
-          "default": "less",
-          "description": "默认的样式文件类型",
-          "enum": [
-            "less",
-            "scss"
-          ]
-        }
-      }
-    }
+		"configuration": {
+			"type": "object",
+			"title": "Mobx-Snippets",
+			"properties": {
+				"mobx.snippets.autoCreate": {
+					"type": "boolean",
+					"default": false,
+					"description": "是否根据设置自动生成模版"
+				},
+				"mobx.snippets.tempType": {
+					"type": "string",
+					"default": "default",
+					"description": "默认生成的模版类型",
+					"enum": [
+						"default",
+						"component",
+						"functional"
+					],
+					"enumDescriptions": [
+						"默认模版",
+						"组件模版（包括classNames库）",
+						"函数组件"
+					]
+				},
+				"mobx.snippets.fileType": {
+					"type": "string",
+					"default": "typescript",
+					"description": "默认的文件类型",
+					"enum": [
+						"typescript",
+						"javascript"
+					]
+				},
+				"mobx.snippets.cssType": {
+					"type": "string",
+					"default": "less",
+					"description": "默认的样式文件类型",
+					"enum": [
+						"less",
+						"scss"
+					]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
