@@ -1,9 +1,20 @@
 # Change Log
 
-All notable changes to the "mobx-snippets" extension will be documented in this file.
+## 0.1.1 - 2019-11-07
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- 增加插件内置设置，允许用户自主修改配置来跳过新建模版时的前置选项更加快速的创建模版。
 
-## [Unreleased]
+## 0.1.0 - 2019-11-05
 
-- Initial release
+- 增加了函数组件的通用模版
+- 增加了React Hooks 相关的代码片段
+- 文档完善
+
+## 0.0.5 - 2019-11-04
+
+- 新增左侧菜单命令-新建模版， 能够快速创建开发时频繁需要的组件文件夹。
+
+
+## 0.0.1 - 2019-10-28
+
+- 初版发布，支持React结合Mobx的一些常用代码片段
