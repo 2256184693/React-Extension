@@ -27,14 +27,14 @@
         "\t}, [stateName]);",
         "\treturn (",
         "\t\t<div className=\"$FILE_NAME\"></div>",
-        "\t}",
+        "\t);",
         "}",
         "export default $FILE_NAME;"
       ]
     },
     {
       "name": "index.jsx",
-      "type": "javascriptscript",
+      "type": "javascript",
       "body": [
         "import React, { useState, useEffect} from 'react';",
         "",
@@ -48,7 +48,7 @@
         "\t}, [stateName]);",
         "\treturn (",
         "\t\t<div className=\"$FILE_NAME\"></div>",
-        "\t}",
+        "\t);",
         "}",
         "export default $FILE_NAME;"
       ]
