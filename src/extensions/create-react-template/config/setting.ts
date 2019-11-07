@@ -1,11 +1,11 @@
 import { TempType, FileType, CssType } from "../typings";
 
 export default {
-  prefix: 'mobx.snippets',
-  autoCreate: 'mobx.snippets.autoCreate',
-  tempType: 'mobx.snippets.tempType',
-  fileType: 'mobx.snippets.fileType',
-  cssType: 'mobx.snippets.cssType'
+  prefix: 'react.extension.snippets',
+  autoCreate: 'react.extension.snippets.autoCreate',
+  tempType: 'react.extension.snippets.tempType',
+  fileType: 'react.extension.snippets.fileType',
+  cssType: 'react.extension.snippets.cssType'
 };
 
 export interface Settings {

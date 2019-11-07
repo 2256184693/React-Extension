@@ -1,6 +1,10 @@
-# Mobx-Snippets 
+# React-Extension
 
-本插件基于React和Mobx添加了VSCode常用的代码片段为开发带来便利。本插件支持 `.js`、`.jsx`、`.ts`、`.tsx`类型文件。
+本插件基于React添加了VSCode常用的代码片段为开发带来便利。
+
+本插件支持 `.js`、`.jsx`、`.ts`、`.tsx`类型文件。
+
+本插件内置的状态管理代码片段基于`Mobx`。
 
 > 相同的指令在 `js` 和 `ts` 中可能会表现不同。（部分指令对`typescript`做了支持）
 
