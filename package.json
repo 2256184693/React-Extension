@@ -1,20 +1,20 @@
 {
-	"name": "mobx-snippets",
-	"displayName": "mobx-snippets",
-	"description": "some useful snippets for mobx && react",
+	"name": "react-extension",
+	"displayName": "react-extension",
+	"description": "useful tools for react(snippets and template)",
 	"version": "0.1.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/2256184693/Mobx-Snippets"
+		"url": "https://github.com/2256184693/React-Extension"
 	},
 	"license": "MIT",
-	"icon": "src/assets/mobx.png",
+	"icon": "src/assets/react.png",
 	"publisher": "sh",
 	"engines": {
 		"vscode": "^1.39.1"
 	},
 	"categories": [
-		"Snippets"
+    "Snippets"
 	],
 	"activationEvents": [
 		"onCommand:extension.createReactTemplate"
