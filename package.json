@@ -1,6 +1,6 @@
 {
 	"name": "react-extension",
-	"displayName": "react-extension",
+	"displayName": "React-Extension",
 	"description": "useful tools for react(snippets and template)",
 	"version": "0.1.3",
 	"repository": {
