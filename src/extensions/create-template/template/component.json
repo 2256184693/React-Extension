@@ -1,5 +1,5 @@
 {
-  "default": [
+  "fileList": [
     {
       "name": "index.module.[cssext]",
       "type": "typescript",

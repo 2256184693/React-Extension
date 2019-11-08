@@ -18,6 +18,9 @@
 	"exclude": [
 		"node_modules",
     ".vscode-test",
-    "./src/extensions/create-react-template/template"
-	]
+  ],
+  "include": [
+    "./src/",
+    "src/extensions/create-template/template/*.json"
+  ]
 }
