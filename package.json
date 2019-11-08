@@ -17,7 +17,7 @@
 		"Snippets"
 	],
 	"activationEvents": [
-		"onCommand:extension.createReactTemplate"
+    "onCommand:extension.createReactTemplate"
 	],
 	"main": "./out/extensions/main.js",
 	"contributes": {
@@ -57,7 +57,7 @@
 		],
 		"commands": [
 			{
-				"command": "extension.createReactTemplate",
+				"command": "extension.templateCreate",
 				"title": "新建模版"
 			}
 		],
@@ -65,7 +65,7 @@
 			"editor/context": [],
 			"explorer/context": [
 				{
-					"command": "extension.createReactTemplate",
+					"command": "extension.templateCreate",
 					"group": "navigation"
 				}
 			]
@@ -75,11 +75,6 @@
 			"type": "object",
 			"title": "React-Extension",
 			"properties": {
-				"react.extension.snippets.autoCreate": {
-					"type": "boolean",
-					"default": false,
-					"description": "是否根据设置自动生成模版"
-				},
 				"react.extension.snippets.tempType": {
 					"type": "string",
 					"default": "default",
@@ -112,7 +107,22 @@
 						"less",
 						"scss"
 					]
-				}
+        },
+        "react.extension.snippets.autoCreate": {
+					"type": "boolean",
+					"default": false,
+					"description": "是否根据设置自动生成模版"
+				},
+        "react.extension.snippets.template": {
+          "type": "array",
+          "default": [],
+          "description": "自定义模版（支持模版目录或者描述模版的json文件）"
+        },
+        "react.extension.snippets.defaultTemplate": {
+          "type": "string",
+          "default": "",
+          "description": "默认生成的自定义模版路径（仅在自动生成模版勾选时生效）"
+        }
 			}
 		}
 	},
