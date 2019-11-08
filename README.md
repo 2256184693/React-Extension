@@ -47,7 +47,6 @@ key|type|default|description
 `react.extension.snippets.cssType`|scss/less|less|对应的样式文件类型
 `react.extension.snippets.fileType`|typescript/javascript|typescript|是否使用typescript
 `react.extension.snippets.tempType`|default/component/functional|default|默认模版类型
-
 `react.extension.snippets.template`|Array|-|用户自定义的模版列表
 `react.extension.snippets.defaultTemplate`|string|-|默认创建的自定义模版类型（配置该项后生效的前提是自动生成模版参数 `autoCreate` 为 `true`）
 
