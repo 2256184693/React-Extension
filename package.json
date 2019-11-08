@@ -17,7 +17,7 @@
 		"Snippets"
 	],
 	"activationEvents": [
-		"onCommand:extension.createReactTemplate"
+		"onCommand:extension.templateCreate"
 	],
 	"main": "./out/extensions/main.js",
 	"contributes": {
