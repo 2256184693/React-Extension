@@ -36,6 +36,9 @@ import {
 const fastCreate = (uri: vscode.Uri, settings: Settings) => {
   const {tempType, fileType, cssType} = settings;
   let template = getTempList().find(template => template.type = tempType) as Template;
+  if(!template) {
+    fail('找不到指定的模版');
+  }
   getFileName({uri, template, fileType, cssType})
     .then(creator)
     .then(success, fail);
