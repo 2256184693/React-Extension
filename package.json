@@ -2,7 +2,7 @@
 	"name": "react-extension",
 	"displayName": "React-Extension",
 	"description": "useful tools for react(snippets and template)",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/2256184693/React-Extension"
