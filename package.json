@@ -80,9 +80,9 @@
 					"default": "default",
 					"description": "默认生成的模版类型",
 					"enum": [
-						"default",
-						"component",
-						"functional"
+						"默认",
+						"组件",
+						"函数组件"
 					],
 					"enumDescriptions": [
 						"默认模版",
