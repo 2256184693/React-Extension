@@ -77,7 +77,7 @@
 			"properties": {
 				"react.extension.snippets.tempType": {
 					"type": "string",
-					"default": "default",
+					"default": "默认",
 					"description": "默认生成的模版类型",
 					"enum": [
 						"默认",
