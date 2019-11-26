@@ -3,7 +3,7 @@
     "prefix": "useState",
     "description": "useState",
     "body": [
-      "let [${1:stateName}, set${2:StateName}] = useState(${3:initialValue});"
+      "const [${1:stateName}, set${2:StateName}] = useState(${3:initialValue});"
     ]
   },
   "useEffect": {
